@@ -1,42 +1,71 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-  <meta charset="utf-8">
-  <title>Invitació d'Aniversari</title>
-  <style>
-    body {
-      font-family: "Comic Sans MS", "Comic Sans", cursive;
-      background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
-      background-size: 400%;
-      animation: rainbow 10s linear infinite;
-      text-align: center;
-      color: white;
-      margin: 0;
-      padding: 0;
-    }
-    h1 {
-      font-size: 4em;
-      text-shadow: 3px 3px 3px #000;
-      margin-top: 50px;
-    }
-    p {
-      font-size: 2em;
-      margin: 20px;
-    }
-    @keyframes rainbow {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-  </style>
+    <meta charset="utf-8">
+    <title>Invitació d'Aniversari</title>
+    <style>
+        body {
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
+            background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+            background-size: 400%;
+            animation: rainbow 10s linear infinite;
+            text-align: center;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 4em;
+            text-shadow: 3px 3px 3px #000;
+            margin-top: 50px;
+        }
+
+        p {
+            font-size: 2em;
+            margin: 20px;
+        }
+
+        /* arc de sant martí en mode rave */
+        @keyframes rainbow {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* animació de rotació endless per a la foto */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        img.rotating {
+            width: 70%;
+            height: 200px;
+            margin-top: 20px;
+            border: 5px dotted yellow;
+            display: inline-block; /* assegura que respecta el transform */
+            animation: spin 5s linear infinite; /* play, repeat, rave */
+            transform-origin: 50% 50%; /* gira des del centre */
+        }
+    </style>
 </head>
 <body>
-  <h1>Festa d'aniversari!</h1>
-  <!-- Afegeix la teva foto aquí -->
-  <img src="foto.jpg" alt="Foto divertida" style="width:60%; margin-top:20px; border:5px dotted yellow;">
-  <p>Estàs convidat a la festa més absurda i divertida per celebrar l'aniversari de la meva germana!</p>
-  <p><strong>Quan:</strong> Dissabte, 30 de juliol</p>
-  <p><strong>On:</strong> Al bar de Little Italy o al lloc que escullis!</p>
-  <p>Confirma la teva assistència i prepara't per un dia ple de rialles i colors!</p>
+<h1>regal cumple</h1>
+<!-- foto que ara fa la volta al món -->
+<img src="makesweet-iz247z.gif" alt="wow1" class="rotating">
+<p>web vàlida com a invitació a un bar de jazz</p>
+<p><strong>quan:</strong> ns quan vulguis</p>
+<p><strong>on:</strong> he vist el little italy o un altre si t'agrada mes ns</p>
 </body>
 </html>
